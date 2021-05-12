@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "L'activité a été demarré !");
 
+
+        // Pour acceder au ressource => Utilise la classe "R" (Generer automatiquement)
+        String text = getString(R.string.demo_text);
+
+        // Affichage d'une notification "Toast"
+        Toast.makeText(this, R.string.message_hello, Toast.LENGTH_LONG).show();
     }
 
     @Override
