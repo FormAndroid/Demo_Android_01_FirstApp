@@ -16,25 +16,29 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "L'activité a été créé !");
 
+
+        DemoApplication app = (DemoApplication) getApplication();
+
+
         // Différent niveau d'affichage de message dans la console
         // - Verbose (Le type de message les moins importants)
-        Log.v("Test", "Ceci est un simple message");
+        Log.v(app.DEBUG_TAG, "Ceci est un simple message");
 
         // - Debug
-        Log.d("Test", "Ceci est mon message de debug !!! :o");
+        Log.d(app.DEBUG_TAG, "Ceci est mon message de debug !!! :o");
 
         // - Information
-        Log.i("Test", "Ceci est un message d'information");
+        Log.i(app.DEBUG_TAG, "Ceci est un message d'information");
 
         // - Attention (Warning)
-        Log.w("Test", "Ceci est un message de warning !!!");
+        Log.w(app.DEBUG_TAG, "Ceci est un message de warning !!!");
 
         // - Erreur
-        Log.e("Test", "Ceci est un message d'erreur ! :( ");
+        Log.e(app.DEBUG_TAG, "Ceci est un message d'erreur ! :( ");
 
         // - Erreur (Le type de message le plus important)
         //   -> What the failure
-        Log.wtf("Test", "Ceci est un message ultra important !!!!!!!");
+        Log.wtf(app.DEBUG_TAG, "Ceci est un message ultra important !!!!!!!");
 
     }
 
